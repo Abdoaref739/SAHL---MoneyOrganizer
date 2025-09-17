@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new account | sahl</title>
+    <link rel="stylesheet" href="add-banking-account-page.css">
+</head>
+<body>
+    <h3 class="text-center">Add new account</h3>
+    <div id="add-account-form">
+        <label for="username" class="username-label">Username:</label>
+        <input type="text" id="username-field" name="username" placeholder="Enter your username">
+        <br>
+        <label for="accountType" class="account-type-label">Account Type:</label>
+        <select id="bank-name">
+            <option value="no-value" class="no-value-option">choose an option</option>
+            <option value="sahl bank">sahl bank</option>
+        </select>
+        <br>
+        <label for="password" class="password-label">Password: </label>
+        <input type="password" id="password-field" name="password" placeholder="Enter your password">
+        <br>
+        <label for="confirm-password" class="confirm-password-label">Confirm Password: </label>
+        <input type="password" id="confirm-password-field" name="confirm-password" placeholder="Confirm your password">
+        <button id="add-account-button">Add Account</button>
+    </div>
+    <script>
+        let username_field = document.getElementById("username-field");
+        let account_type = document.getElementById("bank-name");
+        let password_field = document.getElementById("password-field");
+        let confirm_password_field = document.getElementById("confirm-password-field");
+        let add_account_button = document.getElementById("add-account-button");
+        
+        add_account_button.onclick = function(){
+            localStorage.setItem("username", username_field.value);
+            localStorage.setItem("banktype", account_type.value);
+            localStorage.setItem("password", password_field.value);
+            localStorage.setItem("confirmpassword", confirm_password_field.value);
+            window.location.href = "./dashboard.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Money | sahl</title>
+    <link rel="stylesheet" href="add-money-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <i class="fa-solid fa-arrow-left" id="arrow-left"></i>
+    <div id="add-money-section">
+    <h1 class="page-header">Add Money to Your Account!</h1>
+    <label for="moneyamount" class="money-amount">Money Amount:</label>
+    <input type="number" id="money-amount-field" min="0" max="500">
+    <label for="password" class="password-label">Confirm your Password:</label>
+    <input type="password" id="password-field">
+    <button id="add-money-button">Add Money</button>
+    </div>
+    <script>
+        let money_amount_field = document.getElementById("money-amount-field");
+        let add_money_button = document.getElementById("add-money-button");
+        let arrow_back = document.getElementById("arrow-left");
+        let no_of_transactions = 0;
+        add_money_button.addEventListener("click", function(){
+            alert(`successfully added ${money_amount_field.value}`);
+        localStorage.setItem("moneyadded", money_amount_field.value);
+        money_amount_field.value = "";
+        window.location.href = "./dashboard.html";
+        no_of_transactions += 1;
+        localStorage.setItem("transactions", no_of_transactions);
+        
+        localStorage.setItem("moneywithdrawed", 0);
+        });
+
+        arrow_back.addEventListener("click", function(){
+            window.location.href = "./dashboard.html";
+        });
+        </script>
+</body>
+</html>

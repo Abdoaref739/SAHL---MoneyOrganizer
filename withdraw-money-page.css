@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#arrow-left{
+    position: absolute;
+    font-size: 35px;
+    color: blue;
+    margin-top: -550px;
+    cursor: pointer;
+}
+#arrow-left:hover{
+    color: black;
+    transition: 0.7s;
+}
+#withdraw-money-section{
+        display: flex;
+        align-items: center;
+    width: 75%;
+    height: 550px;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 15px;
+    margin-top: 70px;
+    margin-left: 0px;
+    background-color: rgb(209, 247, 255);
+    border-radius: 10px;
+    border: 2px solid blue;
+}
+.page-header{
+font-size: 28px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+margin-left: 0px;
+ margin-top: 50px;
+}
+.money-amount{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: -28%;
+}
+#money-amount-field{
+    width: 50%;
+        height: 35px;
+    font-size: 16px;
+    padding-left: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+#money-amount-field:focus{
+    outline: none;
+    border: 2px solid blue;
+    color: blue;
+}
+#withdraw-money-button{
+    width: 50%;
+    height: 45px;
+    background-color: blue;
+    border: 2px solid blue;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 100px;
+
+}
+#withdraw-money-button:hover{
+    background-color: darkblue;
+    border: 2px solid darkblue;
+    transition: 0.7s;
+}
+.password-label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: -15%;
+}
+#password-field{
+    width: 50%;
+    height: 35px;
+    font-size: 16px;
+    padding-left: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+#password-field:focus{
+    color: blue;
+    outline: none;
+    border: 2px solid blue;
+}

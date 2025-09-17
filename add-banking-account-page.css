@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.text-center{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#add-account-form{
+    display: flex;
+    max-width: 55%;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 15px;
+    margin-left: 23%;
+}
+.username-label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+
+}
+#username-field{
+    height: 30px;
+    font-size: 16px;
+    padding-left: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+#username-field:focus{
+    outline: none;
+    border: 2px solid blue;
+    color: blue;
+}
+.account-type-label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+#bank-name{
+    height: 30px;
+    font-size: 16px;
+    padding-left: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+#bank-name:focus{
+    outline: none;
+    border: 2px solid blue;
+    color: blue;
+}
+.no-value-option{
+    color: black;
+}
+.password-label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+#password-field{
+    height: 30px;
+    font-size: 16px;
+    padding-left: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+#password-field:focus{
+    outline: none;
+    border: 2px solid blue;
+    color: blue;
+}
+.confirm-password-label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+#confirm-password-field{
+    height: 30px;
+    font-size: 16px;
+    padding-left: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+#confirm-password-field:focus{
+    outline: none;
+    border: 2px solid blue;
+    color: blue;
+}
+#add-account-button{
+    width: 55%;
+    height: 50px;
+    background-color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    color: blue;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20%;
+}
+#add-account-button:hover{
+    background-color: blue;
+    color: white;
+    transition: 0.7s;
+}

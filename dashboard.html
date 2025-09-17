@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user dashboard | sahl</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="upper-container">
+        <h1 class="welcome-text">Welcome, User!</h1>
+        <h3 class="account-balance">Your Available Balance: <span id="balance"></span> EGP</h3>
+        <button id="logout-button">Logout</button>
+    </div>
+    <div class="banking-account-section">
+        <h3 class="banking-account-message">You Don't Have any Account!</h3>
+        <h3 class="banking-account-details"></h3>
+        <button id="add-new-account-button">Add new one</button>
+    </div>
+    <div class="middle-container">
+        <h2 class="sections-title">Available Sections!</h2>
+        <div id="add-money-section">
+            <h5 class="add-money-text">add money</h5>
+        </div>
+        <div id="withdraw-money-section">
+            <h5 class="add-money-text">withdraw money</h5>
+        </div>
+        <div id="money-services-section">
+            <h5 class="add-money-text">money services</h5>
+        </div>
+        <div id="donations-section"></div>
+    </div>
+    <nav id="navbar"></nav>
+    <footer class="footer">Made With 💙 By Abdulrahman Aref</footer>
+    <div class="transactions-section">
+        <h2 class="sections-title">Last Transactions</h2>
+    </div>
+<script>
+let balance = document.getElementById("balance");
+let banking_account_message = document.querySelector(".banking-account-message");
+let add_new_account_button = document.getElementById("add-new-account-button");
+let welcome_text = document.querySelector(".welcome-text");
+let banking_account_details = document.querySelector(".banking-account-details");
+let add_money_section = document.getElementById("add-money-section");
+let withdraw_money_section = document.getElementById("withdraw-money-section");
+let money_services_section = document.getElementById("money-services-section");
+let transactions_section = document.querySelector(".transactions-section");
+
+window.onload = function() {
+    const username = localStorage.getItem("username");
+    const banktype = localStorage.getItem("banktype");
+
+    if (username && banktype) {
+        welcome_text.innerHTML = `Welcome, ${username}!`;
+        add_new_account_button.style.display = "none";
+        banking_account_message.textContent = `Your Current Account is in ${banktype}`;
+    }
+
+    let old_balance = Number(localStorage.getItem("balance")) || 0;
+    let moneywithdrawed = Number(localStorage.getItem("moneywithdrawed")) || 0;
+    let money_added = Number(localStorage.getItem("moneyadded")) || 0;
+    let new_balance = old_balance;
+
+    if (money_added > 0) {
+        new_balance = old_balance + money_added;
+        localStorage.setItem("balance", new_balance);
+        localStorage.setItem("moneyadded", 0);
+
+        let transaction_box = document.createElement("div");
+        transaction_box.classList.add("transaction-box");
+        transaction_box.textContent = `You added ${money_added} EGP to your account in ${banktype}`;
+        transactions_section.appendChild(transaction_box);
+    }
+
+    if (moneywithdrawed > 0) {
+        new_balance = old_balance - moneywithdrawed;
+        localStorage.setItem("balance", new_balance);
+        localStorage.setItem("moneywithdrawed", 0);
+
+        let transaction_box = document.createElement("div");
+        transaction_box.classList.add("transaction-box");
+        transaction_box.textContent = `You withdrew ${moneywithdrawed} EGP from your account in ${banktype}`;
+        transactions_section.appendChild(transaction_box);
+    }
+
+    balance.textContent = new_balance;
+};
+
+add_new_account_button.onclick = function() {
+    window.location.href = "add-banking-account-page.html";
+}
+add_money_section.onclick = function() {
+    window.location.href = "./add-money-page.html";
+}
+withdraw_money_section.onclick = function(){
+    window.location.href = "withdraw-money-page.html";
+}
+money_services_section.onclick = function() {
+    alert("coming soon!")
+}
+</script>
+
+</body>
+</html>

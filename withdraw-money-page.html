@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Money | sahl</title>
+    <link rel="stylesheet" href="withdraw-money-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <i class="fa-solid fa-arrow-left" id="arrow-left"></i>
+    <div id="withdraw-money-section">
+    <h1 class="page-header">withdraw Money from Your Account!</h1>
+    <label for="moneyamount" class="money-amount">Money Amount:</label>
+    <input type="number" id="money-amount-field" min="0" max="500">
+    <label for="password" class="password-label">Confirm your Password:</label>
+    <input type="password" id="password-field">
+    <button id="withdraw-money-button">Withdraw Money</button>
+    </div>
+    <script>
+        let money_amount_field = document.getElementById("money-amount-field");
+        let withdraw_money_button = document.getElementById("withdraw-money-button");
+        let arrow_back = document.getElementById("arrow-left");
+        let no_of_transactions = 0;
+        withdraw_money_button.addEventListener("click", function(){
+            alert(`successfully withdrawed ${money_amount_field.value}`);
+        localStorage.setItem("moneywithdrawed", money_amount_field.value);
+        money_amount_field.value = "";
+        window.location.href = "./dashboard.html";
+        let no_of_transactions = Number(localStorage.getItem("transactions")) || 0;
+        no_of_transactions += 1;
+        localStorage.setItem("transactions", no_of_transactions);
+        localStorage.setItem("moneyadded", 0);
+
+        });
+
+        arrow_back.addEventListener("click", function(){
+            window.location.href = "./dashboard.html";
+        });
+        </script>
+</body>
+</html>

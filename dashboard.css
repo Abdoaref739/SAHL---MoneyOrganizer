@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(32, 32, 255);
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(209, 247, 255);
+}
+.upper-container{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to bottom, #006cc5, #0010a1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 120px;
+    border-bottom-right-radius: 120px;
+}
+.welcome-text{
+    position: absolute;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: -30px;
+}
+.account-balance{
+     color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 60px;
+    margin-left: 40px;
+    
+}
+.banking-account-section{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 100px;
+    background-color: rgb(209, 247, 255);
+    margin-top: 165px;
+    margin-left: 2.5%;
+    border-radius: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.banking-account-details{
+    margin-left: 150px;
+}
+
+#add-new-account-button{
+    position: absolute;
+    width: 160px;
+    height: 40px;
+    background: white;
+    border: 2px solid rgb(23, 36, 218);
+    border-radius: 5px;
+    margin-left: 280px;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+}
+#add-new-account-button:hover{
+    background-color: rgb(23, 36, 218);
+    color: white;
+    transition: 0.7s;
+}
+.middle-container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    height: 500px;
+    background-color: rgb(209, 247, 255);
+    margin-top: 300px;
+    border-radius: 10px;
+    margin-left: 2.5%;
+}
+.sections-title{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 20px;
+    
+}
+#add-money-section{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border: 2px solid rgb(23, 36, 218);
+    border-radius: 10px;
+    margin-top: 80px;
+    margin-left: -480px;
+    cursor: pointer;
+}
+#add-money-section:hover{
+    background-color: rgb(23, 36, 218);
+    color: white;
+    transition: 0.7s;
+}
+#withdraw-money-section{
+    position: absolute;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border: 2px solid rgb(23, 36, 218);
+    border-radius: 10px;
+    margin-top: 80px;
+    margin-left: 0px;
+    cursor: pointer;
+}
+#withdraw-money-section:hover{
+    background-color: rgb(23, 36, 218);
+    color: white;
+    transition: 0.7s;
+}
+#money-services-section{
+    position: absolute;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border: 2px solid rgb(23, 36, 218);
+    border-radius: 10px;
+    margin-top: 80px;
+    margin-left: 480px;
+    cursor: pointer;
+
+}
+#money-services-section:hover{
+    background-color: rgb(23, 36, 218);
+    color: white;
+    transition: 0.7s;
+}
+.add-money-text{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    margin-top: 50px;
+}
+#navbar{
+    position: fixed;
+    width: 96%;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 600px;
+    border: 2px solid rgb(23, 36, 218);
+    margin-left: 2%;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    z-index: 1000;
+} 
+.footer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    margin-top: 1400px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+.transactions-section{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    height: 500px;
+    background-color: rgb(209, 247, 255);
+    margin-top: 850px;
+    border-radius: 10px;
+    margin-left: 2.5%;
+}
+.transaction-box{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 100px;
+    margin-top: 0px;
+    background-color: transparent;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 70px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    color: black;
+}
+@media screen and (max-width: 700px) {
+#add-money-section{
+    width: 120px;
+    height: 120px;
+    margin-left: -330px;
+}
+#withdraw-money-section{
+     width: 120px;
+    height: 120px;
+}
+#money-services-section{
+     width: 120px;
+    height: 120px;
+    margin-left: 330px;
+}
+.add-money-text{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    margin-top: 50px;
+}
+}

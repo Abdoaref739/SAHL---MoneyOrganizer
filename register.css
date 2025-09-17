@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgb(16, 16, 133);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 70%;
+    height: 80%;
+    background-color: white;
+    margin-top: 630px;
+    border-color: transparent;
+    border-radius: 8px;
+}
+.title{
+    position: absolute;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 45px;
+color: black;
+margin-left: -35%;
+margin-top: 5%;
+}
+#registration-form{
+        display: flex;
+    max-width: 55%;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 15px;
+    margin-top: 120px;
+    margin-left: 0px;
+}
+.username-label{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+#username-field{
+    height: 30px;
+    font-size: 16px;
+    padding-left: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+#username-field:focus{
+    border-color:rgb(16, 16, 133);
+}
+.email-label{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+#email-field{
+    height: 30px;
+    font-size: 16px;
+    padding-left: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.password-label{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+#password-field{
+    height: 30px;
+    font-size: 16px;
+    padding-left: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.confirm-password-label{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+#confirm-password-field{
+    height: 30px;
+    font-size: 16px;
+    padding-left: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+#register-button{
+    position: absolute;
+  width: 200px;
+  height: 55px;
+  background-color: white;
+  color:  rgb(16, 16, 133);
+  border-radius: 5px;
+  cursor: pointer;
+  border-color:  rgb(16, 16, 133);
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  margin-top: 450px;
+  margin-left: 0%;
+}
+
+#register-button:hover{
+  background-color:  rgb(16, 16, 133);
+  border: 2px solid  white;
+  transition: 0.7s ease;
+  color: white;
+
+}
+.circle1{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    border: 5px solid white;
+    border-radius: 350px;
+    margin-top: 100px;
+    margin-left: -90%;
+}
